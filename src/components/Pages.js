@@ -36,7 +36,8 @@ export const Photos = () => {
 
 export const Cocktails = () => {
 
-	const cocktailsElements = <ul>{cocktails.drinks.map((drink,index) => {
+	const cocktailsElements = 
+	cocktails.drinks.map((drink,index) => {
 		return(
 			<li key={index}>
 				<h5>Name: {drink.name}</h5>
@@ -45,12 +46,14 @@ export const Cocktails = () => {
 			</li>
 
 		)
-	})}</ul>
+	})
 
 	return (
 		<Card fluid>
 			<Card.Content textAlign="center">
-				{cocktailsElements}
+				<ul>
+					{cocktailsElements}
+				</ul>
 			</Card.Content>
 		</Card>
 	)
